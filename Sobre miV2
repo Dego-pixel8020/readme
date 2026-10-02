@@ -137,4 +137,158 @@
         window.onload = initializeTailwind;
     </script>
 </body>
+
+
+
+css
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+	--ink: #263238;
+	--muted: #68757b;
+	--coral: #e87961;
+	--coral-dark: #c95d49;
+	--cream: #fffaf4;
+	--line: rgba(38, 50, 56, 0.1);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: var(--ink);
+	font-family: 'DM Sans', sans-serif;
+	background:
+		radial-gradient(circle at 8% 8%, rgba(232, 121, 97, 0.16), transparent 25rem),
+		radial-gradient(circle at 92% 88%, rgba(93, 173, 160, 0.15), transparent 28rem),
+		var(--cream) !important;
+}
+
+body > div {
+	position: relative;
+}
+
+.site-nav {
+	align-items: center;
+	background: linear-gradient(90deg, #102847, #1e4d7b);
+	border-radius: 14px;
+	box-shadow: 0 8px 24px rgba(16, 40, 71, 0.18);
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 3rem;
+	padding: 0.8rem 1rem;
+}
+
+.site-brand {
+	color: #ffffff;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-decoration: none;
+}
+
+.site-nav .nav-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+}
+
+.site-nav .nav-links a {
+	border-radius: 999px;
+	color: #edf3ff;
+	font-size: 0.94rem;
+	padding: 0.5rem 0.8rem;
+	text-decoration: none;
+}
+
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:focus-visible {
+	background: rgba(255, 255, 255, 0.14);
+	outline: none;
+}
+
+.title-font {
+	color: var(--ink) !important;
+	font-family: 'Playfair Display', serif;
+	letter-spacing: 0;
+}
+
+.eyebrow {
+	color: var(--coral-dark);
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	margin-bottom: 0.4rem;
+}
+
+.surname {
+	color: var(--coral-dark);
+	font-family: 'Playfair Display', serif;
+	font-size: 1.55rem;
+	margin-top: -0.25rem;
+}
+
+.text-slate-500,
+.text-slate-600 {
+	color: var(--muted) !important;
+}
+
+.bg-white {
+	background: rgba(255, 255, 255, 0.88) !important;
+}
+
+.rounded-3xl {
+	border-radius: 1.5rem !important;
+}
+
+.shadow-xl {
+	box-shadow: 0 22px 55px rgba(112, 75, 53, 0.13) !important;
+}
+
+.profile-img {
+	border-color: var(--cream) !important;
+	filter: saturate(1.08) contrast(1.03);
+	transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.profile-img:hover {
+	filter: saturate(1.2) contrast(1.05);
+	transform: rotate(-2deg) scale(1.03);
+}
+
+.contact-card {
+	border-color: var(--line) !important;
+	box-shadow: 0 8px 22px rgba(112, 75, 53, 0.05);
+	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-card:hover {
+	border-color: rgba(232, 121, 97, 0.45) !important;
+	box-shadow: 0 16px 30px rgba(112, 75, 53, 0.12) !important;
+	transform: translateY(-5px);
+}
+
+@media (max-width: 767px) {
+	body > div {
+		padding-left: 1.25rem !important;
+		padding-right: 1.25rem !important;
+		padding-top: 2rem !important;
+	}
+
+	.site-nav {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 0.65rem;
+		margin-bottom: 2rem;
+	}
+
+	.text-4xl {
+		font-size: 2.35rem !important;
+	}
+
+	.contact-card {
+		align-items: center;
+	}
+}
+
 </html>
