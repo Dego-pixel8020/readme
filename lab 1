@@ -1,0 +1,435 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza HTML5 -->
+<html lang="es">
+<head>
+    <!-- Configuración de caracteres y adaptación a diferentes pantallas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 1 | Instituto Superior de Comercio Francisco Araya Bennett</title>
+    <link rel="stylesheet" href="diseño lab1.css">
+</head>
+<body>
+    <!-- Contenedor general de la página -->
+    <div class="page-shell">
+        <!-- Encabezado con el logo y los enlaces de navegación -->
+        <header class="topbar">
+            <nav class="nav" aria-label="Navegación principal">
+                <a class="logo-insuco" href="../Informaciondelabs/index.html">
+                    <img src="insuco.jpg" alt="Logo del liceo">
+                    <span>Instituto Superior de Comercio Francisco Araya Bennett</span>
+                </a>
+                <div class="nav-links">
+                    <a href="../Informaciondelabs/index.html">Inicio</a>
+                    <a href="../Sobremi/yo.html">Sobre mí</a>
+                    <a href="../Presentacion/Presentacion.html">Presentación</a>
+                    <a href="../Contactarme/Comunicarme.html">Contacto</a>
+                    <a href="../Reserva/Reservaciones.html">Reservar</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Contenido principal con la información del Laboratorio 1 -->
+        <main>
+            <!-- Presentación inicial y enlace a las características -->
+            <section class="hero" id="inicio">
+                <div class="hero-text">
+                    <p class="eyebrow">Instituto Superior de Comercio Francisco Araya Bennett</p>
+                    <h1>Laboratorio 1</h1>
+                    <p class="hero-description">
+                        Un espacio amplio, cómodo y preparado para apoyar el aprendizaje de la comunidad escolar.
+                    </p>
+                    <a class="btn btn-primary" href="#caracteristicas">Conocer el laboratorio</a>
+                </div>
+                <div class="hero-visual">
+                    <img src="insuco.jpg" alt="Identidad visual del Instituto Superior de Comercio">
+                </div>
+            </section>
+
+            <!-- Descripción general del laboratorio -->
+            <section class="intro" id="caracteristicas">
+                <p class="section-kicker">Descripción general</p>
+                <h2>Un ambiente pensado para aprender</h2>
+                <p>
+                    El Laboratorio 1 se destaca por su buena ubicación, temperatura agradable y comodidad.
+                    Es uno de los laboratorios más grandes del liceo, por lo que ofrece un entorno práctico
+                    y flexible para distintas actividades escolares creo que si se pudiera rentar todos los cursos se pelearian por el
+                </p>
+            </section>
+
+            <!-- Tarjetas con las características principales -->
+            <section class="card-grid" id="uso" aria-label="Caracteristicas del Laboratorio 1">
+                <article class="info-card">
+                    <span class="card-number">01</span>
+                    <h3>Espacio amplio</h3>
+                    <p>Su distribución permite trabajar con comodidad y organizar grupos de manera eficiente</p>
+                </article>
+                <article class="info-card">
+                    <span class="card-number">02</span>
+                    <h3>Buena temperatura</h3>
+                    <p>Un ambiente agradable que favorece la concentración durante la jornada escolar</p>
+                </article>
+                <article class="info-card">
+                    <span class="card-number">03</span>
+                    <h3>Uso del laboratorio</h3>
+                    <p>Un espacio creado para el desarrollo de clases, aunque un 70% de los estudiantes se la pasan jugando</p>
+                </article>
+            </section>
+
+            <!-- Galería con imágenes del laboratorio -->
+            <section class="gallery" aria-labelledby="gallery-title">
+                <p class="section-kicker">Imagenes del laboratorio</p>
+                <h2 id="gallery-title">El laboratorio por fuera y por dentro</h2>
+                <div class="gallery-grid">
+                    <figure class="gallery-figure">
+                        <p class="gallery-label">Por fuera</p>
+                        <a class="image-link" href="1000078015.jpg" target="_blank" rel="noopener" aria-label="Ver la vista exterior completa">
+                            <img src="1000078015.jpg" alt="Vista exterior del Laboratorio 1" class="imagen-lab">
+                        </a>
+                    </figure>
+                    <figure class="gallery-figure">
+                        <p class="gallery-label">Por dentro</p>
+                        <a class="image-link" href="fotolab1.jpg" target="_blank" rel="noopener" aria-label="Ver la vista interior completa">
+                            <img src="fotolab1.jpg" alt="Vista interior del Laboratorio 1" class="imagen-lab">
+                        </a>
+                    </figure>
+                </div>
+            </section>
+        </main>
+        <!-- Pie de página de la institución -->
+        <footer>
+            &copy; Instituto Superior de Comercio Francisco Araya Bennett 2026
+        </footer>
+    </div>
+</body>
+</html>
+
+css
+:root {
+    --azul-oscuro: #102847;
+    --azul-medio: #1e4d7b;
+    --azul-claro: #dfeaf8;
+    --dorado: #d8b26a;
+    --blanco: #ffffff;
+    --gris-texto: #46556d;
+    --negro: #1d2430;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #eef4fb 0%, #f9fafc 100%);
+    color: var(--negro);
+}
+
+.page-shell {
+    min-height: 100vh;
+}
+
+.topbar {
+    background: linear-gradient(90deg, var(--azul-oscuro), var(--azul-medio));
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    box-shadow: 0 8px 24px rgba(16, 40, 71, 0.18);
+}
+
+.nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.logo-insuco {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--blanco);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+
+.logo-insuco img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    object-fit: cover;
+    background: var(--blanco);
+}
+
+.nav-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #edf3ff;
+    text-decoration: none;
+    font-size: 0.94rem;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    transition: background 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.2rem 3rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: stretch;
+    background: linear-gradient(135deg, var(--blanco), #edf4ff);
+    border: 1px solid rgba(16, 40, 71, 0.08);
+    border-radius: 22px;
+    box-shadow: 0 18px 40px rgba(16, 40, 71, 0.08);
+    overflow: hidden;
+}
+
+.hero-text {
+    padding: 3.2rem 2.6rem;
+}
+
+.eyebrow,
+.section-kicker {
+    margin: 0 0 0.75rem;
+    color: var(--azul-medio);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.76rem;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: var(--azul-oscuro);
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.hero-description {
+    max-width: 580px;
+    margin-bottom: 1.6rem;
+    color: var(--gris-texto);
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--dorado), #bd9144);
+    color: var(--azul-oscuro);
+    box-shadow: 0 10px 20px rgba(189, 145, 68, 0.25);
+}
+
+.hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 330px;
+    padding: 2rem;
+    background: linear-gradient(135deg, #edf5ff, var(--azul-claro));
+}
+
+.hero-visual img {
+    width: min(230px, 70%);
+    aspect-ratio: 1;
+    border: 8px solid var(--blanco);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 18px 30px rgba(16, 40, 71, 0.16);
+}
+
+.image-link {
+    display: block;
+    cursor: zoom-in;
+}
+
+.intro {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.intro h2 {
+    margin-bottom: 0.8rem;
+    color: var(--azul-oscuro);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.intro p:last-child,
+.info-card p {
+    margin-bottom: 0;
+    color: var(--gris-texto);
+    line-height: 1.7;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.info-card {
+    padding: 1.6rem;
+    background: var(--blanco);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+}
+
+.card-number {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--dorado);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.info-card h3 {
+    margin-bottom: 0.6rem;
+    color: var(--azul-medio);
+    font-size: 1.35rem;
+}
+
+.gallery {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+    text-align: center;
+}
+
+.gallery h2 {
+    margin-bottom: 1.2rem;
+    color: var(--azul-oscuro);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-figure {
+    margin: 0;
+}
+
+.gallery-label {
+    margin-bottom: 0.75rem;
+    color: var(--azul-medio);
+    font-weight: 700;
+}
+
+.imagen-lab {
+    display: block;
+    width: 76%;
+    max-width: 560px;
+    height: 590px;
+    margin: 0 auto;
+    border: 6px solid var(--blanco);
+    border-radius: 14px;
+    object-fit: cover;
+    object-position: center top;
+    box-shadow: 0 14px 28px rgba(16, 40, 71, 0.14);
+}
+
+.gallery-figure figcaption {
+    margin-top: 0.75rem;
+    color: var(--gris-texto);
+    font-size: 0.95rem;
+}
+
+footer {
+    padding: 1.2rem 1rem;
+    background: var(--azul-oscuro);
+    color: #e2e8f0;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+    .topbar {
+        padding: 1rem;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .hero,
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        padding: 2.2rem 1.5rem;
+    }
+
+    .hero-visual {
+        min-height: 240px;
+    }
+
+    .intro {
+        padding: 1.5rem;
+    }
+
+    .gallery {
+        padding: 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-lab {
+        width: 100%;
+        height: 460px;
+    }
+}
