@@ -1,0 +1,430 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza HTML5 -->
+<html lang="es">
+<head>
+    <!-- Configuración de caracteres y adaptación a diferentes pantallas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hoja de estilos propia de esta página -->
+    <title>Laboratorio 5 | Instituto Superior de Comercio Francisco Araya Bennett</title>
+    <link rel="stylesheet" href="diseño lab5.css">
+</head>
+<body>
+    <!-- Contenedor general de la página -->
+    <div class="page-shell">
+        <!-- Encabezado con el logo y los enlaces de navegación -->
+        <header class="topbar">
+            <nav class="nav" aria-label="Navegación principal">
+                <a class="logo-insuco" href="../Informaciondelabs/index.html">
+                    <img src="insuco.jpg" alt="Logo del liceo">
+                    <span>Instituto Superior de Comercio Francisco Araya Bennett</span>
+                </a>
+                <div class="nav-links">
+                    <a href="../Informaciondelabs/index.html">Inicio</a>
+                    <a href="../Sobremi/yo.html">Sobre mí</a>
+                    <a href="../Presentacion/Presentacion.html">Presentación</a>
+                    <a href="../Contactarme/Comunicarme.html">Contacto</a>
+                    <a href="../Reserva/Reservaciones.html">Reservar</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Contenido principal con la información del Laboratorio 5 -->
+        <main>
+            <!-- Presentación inicial y enlace a las características -->
+            <section class="hero" id="inicio">
+                <div class="hero-text">
+                    <p class="eyebrow">Instituto Superior de Comercio</p>
+                    <h1>Laboratorio 5</h1>
+                    <p class="hero-description">
+                       Un lugar algo mas reducido y aveces algo helado, pero tiene unos computadores exelentes para poder trabajar y hacer tareas, aunque aveces se pone algo ruidoso por los estudiantes que juegan en el laboratorio pero es agradable
+                    </p>
+                    <a class="btn btn-primary" href="#caracteristicas">Conocer el laboratorio</a>
+                </div>
+                <div class="hero-visual">
+                    <img src="insuco.jpg" alt="Identidad visual del Instituto Superior de Comercio">
+                </div>
+            </section>
+
+            <!-- Descripción general del laboratorio -->
+            <section class="intro" id="caracteristicas">
+                <p class="section-kicker">Descripción general</p>
+                <h2>De todos este es el mas odiado.</h2>
+                <p>
+                  El laboratorio 5 suele considerarse uno de los menos atractivos por su estado y por la experiencia general de uso. La mayoría de los cursos prefieren otros espacios, ya que el ambiente es menos cómodo y algunos equipos presentan limitaciones que afectan la práctica. Aun así, sigue siendo un lugar útil para ciertos trabajos y actividades.
+                </p>
+            </section>
+
+            <!-- Tarjetas con las características principales -->
+            <section class="card-grid" id="uso" aria-label="Caracteristicas del Laboratorio 5">
+                <article class="info-card">
+                    <span class="card-number">01</span>
+                    <h3>Estado de los equipos</h3>
+                    <p>Algunos equipos presentan fallas en periféricos o en su funcionamiento general, lo que afecta la experiencia de uso y exige más paciencia al trabajar.</p>
+                </article>
+                <article class="info-card">
+                    <span class="card-number">02</span>
+                    <h3>Ambiente aceptable</h3>
+                    <p>El ambiente es relativamente cómodo, aunque el estado del techo y de algunos elementos muestra que requiere mantenimiento. Aun así, la temperatura suele ser más agradable que en otros laboratorios.
+                    </p>
+                </article>
+                <article class="info-card">
+                    <span class="card-number">03</span>
+                    <h3>Muy pocos cursos van</h3>
+                    <p>Por su estado y su ambiente, muchos estudiantes prefieren otros laboratorios para realizar sus actividades, aunque este sigue siendo funcional para ciertas tareas.</p>
+                </article>
+            </section>
+
+            <!-- Galería con imágenes exteriores e interiores -->
+            <section class="gallery" aria-labelledby="gallery-title">
+                <p class="section-kicker">Imagenes del laboratorio</p>
+                <h2 id="gallery-title">El laboratorio por fuera y por dentro</h2>
+                <div class="gallery-grid">
+                    <figure class="gallery-figure">
+                        <p class="gallery-label">Por fuera</p>
+                        <a class="image-link" href="1000078019.jpg" target="_blank" rel="noopener" aria-label="Ver la vista exterior completa">
+                            <img src="1000078019.jpg" alt="Vista exterior del Laboratorio 5" class="imagen-lab">
+                        </a>
+                    </figure>
+                    <figure class="gallery-figure">
+                        <p class="gallery-label">Por dentro</p>
+                        <a class="image-link" href="1000079269.jpg" target="_blank" rel="noopener" aria-label="Ver la vista interior completa">
+                            <img src="1000079269.jpg" alt="Vista interior del Laboratorio 5" class="imagen-lab">
+                        </a>
+                    </figure>
+                </div>
+            </section>
+        </main>
+        <!-- Pie de página de la institución -->
+        <footer>
+            &copy; Instituto Superior de Comercio Francisco Araya Bennett 2026
+        </footer>
+    </div>
+</body>
+</html>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+	--azul-oscuro: #102847;
+	--azul-medio: #1e4d7b;
+	--azul-claro: #dfeaf8;
+	--dorado: #d8b26a;
+	--blanco: #ffffff;
+	--gris-texto: #46556d;
+	--negro: #1d2430;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	color: var(--negro);
+	background: linear-gradient(180deg, #eef4fb 0%, #f9fafc 100%);
+	font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.page-shell {
+	min-height: 100vh;
+}
+
+.topbar {
+	padding: 1rem 2rem;
+	color: var(--blanco);
+	background: linear-gradient(90deg, var(--azul-oscuro), var(--azul-medio));
+	box-shadow: 0 8px 24px rgba(16, 40, 71, 0.18);
+}
+
+.nav {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.logo-insuco {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	color: var(--blanco);
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-decoration: none;
+}
+
+.logo-insuco img {
+	width: 52px;
+	height: 52px;
+	object-fit: cover;
+	border: 2px solid rgba(255, 255, 255, 0.7);
+	border-radius: 50%;
+	background: var(--blanco);
+}
+
+.nav-links a {
+	display: inline-block;
+	padding: 0.55rem 0.9rem;
+	color: #edf3ff;
+	border-radius: 999px;
+	font-size: 0.94rem;
+	text-decoration: none;
+	transition: background 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+	background: rgba(255, 255, 255, 0.14);
+}
+
+main {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 2rem 1.2rem 1rem;
+}
+
+.hero {
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	overflow: hidden;
+	border: 1px solid rgba(16, 40, 71, 0.08);
+	border-radius: 22px;
+	background: linear-gradient(135deg, var(--blanco), #edf4ff);
+	box-shadow: 0 18px 40px rgba(16, 40, 71, 0.08);
+}
+
+.hero-text {
+	padding: 3.2rem 2.6rem;
+}
+
+.eyebrow,
+.section-kicker {
+	margin: 0 0 0.75rem;
+	color: var(--azul-medio);
+	font-size: 0.76rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Space Grotesk', Arial, sans-serif;
+}
+
+h1 {
+	margin-bottom: 1rem;
+	color: var(--azul-oscuro);
+	font-size: clamp(2.3rem, 5vw, 4rem);
+	line-height: 1.1;
+}
+
+.hero-description {
+	max-width: 580px;
+	margin-bottom: 1.6rem;
+	color: var(--gris-texto);
+	font-size: 1.08rem;
+	line-height: 1.7;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.9rem 1.5rem;
+	border-radius: 999px;
+	font-weight: 700;
+	text-decoration: none;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+	transform: translateY(-2px);
+}
+
+.btn-primary {
+	color: var(--azul-oscuro);
+	background: linear-gradient(135deg, #d8b26a, #efd28f);
+	box-shadow: 0 10px 20px rgba(216, 178, 106, 0.3);
+}
+
+.hero-visual {
+	display: flex;
+	min-height: 330px;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	background: linear-gradient(135deg, #edf5ff, var(--azul-claro));
+}
+
+.hero-visual img {
+	width: min(230px, 70%);
+	aspect-ratio: 1;
+	object-fit: cover;
+	border: 8px solid var(--blanco);
+	border-radius: 50%;
+	box-shadow: 0 18px 30px rgba(16, 40, 71, 0.16);
+}
+
+.image-link {
+	display: block;
+	cursor: zoom-in;
+}
+
+.intro {
+	margin: 2rem 0;
+	padding: 2rem;
+	border: 1px solid rgba(148, 163, 184, 0.2);
+	border-radius: 18px;
+	background: rgba(255, 255, 255, 0.78);
+	box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.intro h2 {
+	margin-bottom: 0.8rem;
+	color: var(--azul-oscuro);
+	font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.intro p:last-child,
+.info-card p {
+	margin-bottom: 0;
+	color: var(--gris-texto);
+	line-height: 1.7;
+}
+
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+}
+
+.info-card {
+	padding: 1.6rem;
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	background: var(--blanco);
+	box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+}
+
+.card-number {
+	display: block;
+	margin-bottom: 1rem;
+	color: var(--dorado);
+	font-size: 1.5rem;
+	font-weight: 800;
+}
+
+.info-card h3 {
+	margin-bottom: 0.6rem;
+	color: var(--azul-medio);
+	font-size: 1.35rem;
+}
+
+.gallery {
+	margin-top: 2rem;
+	padding: 2rem;
+	border: 1px solid rgba(148, 163, 184, 0.2);
+	border-radius: 18px;
+	background: rgba(255, 255, 255, 0.78);
+	box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+	text-align: center;
+}
+
+.gallery h2 {
+	margin-bottom: 1.5rem;
+	color: var(--azul-oscuro);
+	font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.5rem;
+}
+
+.gallery-figure {
+	margin: 0;
+}
+
+.gallery-label {
+	margin-bottom: 0.75rem;
+	color: var(--azul-medio);
+	font-family: 'Space Grotesk', Arial, sans-serif;
+	font-weight: 700;
+}
+
+.imagen-lab {
+	display: block;
+	width: 76%;
+	max-width: 560px;
+	height: 590px;
+	margin: 0 auto;
+	border: 6px solid var(--blanco);
+	border-radius: 14px;
+	object-fit: cover;
+	object-position: center top;
+	box-shadow: 0 14px 28px rgba(16, 40, 71, 0.14);
+}
+
+footer {
+	padding: 1.2rem 1rem;
+	color: #e2e8f0;
+	background: var(--azul-oscuro);
+	font-size: 0.95rem;
+	text-align: center;
+}
+
+@media (max-width: 700px) {
+	.topbar {
+		padding: 1rem;
+	}
+
+	.nav {
+		justify-content: center;
+	}
+
+	.hero,
+	.card-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.hero-text {
+		padding: 2.2rem 1.5rem;
+	}
+
+	.hero-visual {
+		min-height: 240px;
+	}
+
+	.intro {
+		padding: 1.5rem;
+	}
+
+	.gallery {
+		padding: 1.5rem;
+	}
+
+	.gallery-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.imagen-lab {
+		width: 100%;
+		height: 460px;
+	}
+}
