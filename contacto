@@ -1,0 +1,110 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza HTML5 -->
+<html lang="es">
+<head>
+    <!-- Configuración de caracteres y adaptación a diferentes pantallas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título y estilos de la página de contacto -->
+    <title>Comunicar un error | Instituto Superior de Comercio Francisco Araya Bennett</title>
+    <link rel="stylesheet" href="Comunicarme.css">
+</head>
+<body>
+    <!-- Contenedor general de la página -->
+    <div class="page-shell">
+        <!-- Encabezado con navegación hacia las demás páginas -->
+        <header class="topbar">
+            <nav class="nav" aria-label="Navegación principal">
+                <a class="logo-insuco" href="../Informaciondelabs/index.html">
+                    <img src="../Informaciondelabs/insuco.jpg" alt="Logo del liceo">
+                    <span>Instituto Superior de Comercio Francisco Araya Bennett</span>
+                </a>
+                <div class="nav-links">
+                    <a href="../Informaciondelabs/index.html">Inicio</a>
+                    <a href="../Sobremi/yo.html">Sobre mi</a>
+                    <a href="../Presentacion/Presentacion.html" aria-current="page">Presentacion</a>
+                    <a href="../Reserva/Reservaciones.html">Reservaciones</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Área principal del formulario de reportes -->
+        <main class="container">
+            <!-- Introducción para explicar el objetivo del formulario -->
+            <section class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow">Estamos para escucharte</p>
+                    <h1>Ayúdanos a mejorar la página.</h1>
+                    <p class="hero-intro">¿Encontraste un error o algo en el sitio web?, ¿Error en la informacion? o tal vez tengas una idea para mejorar la pagina?</p>
+                    <div class="hero-note">
+                        <span class="note-mark">!</span>
+                        <p>Tomate el tiempo para redactar tu problema y te daremos una solución o pondremos la página en mantenimiento por si es un error de ahí.</p>
+                    </div>
+                </div>
+                <div class="hero-badge" aria-hidden="true">
+                    <span>01</span>
+                    <strong>Tu opinion es importante<br>o tal vez no.</strong>
+                    <small>Instituto Superior de Comercio Francisco Araya Bennett</small>
+                </div>
+            </section>
+
+            <!-- Formulario y recomendaciones para enviar un reporte -->
+            <section class="contact-layout" aria-label="Formulario de contacto">
+                <form class="report-form" action="#enviado" method="get">
+                    <div class="section-heading">
+                        <p class="eyebrow">Formulario de reporte</p>
+                        <h2>Cuéntanos lo que encontraste</h2>
+                    </div>
+
+                    <div class="field-grid">
+                        <label>
+                            Tu nombre e apellido
+                            <input type="text" name="nombre" placeholder="Ej: Antonella Navarretes" required>
+                        </label>
+                        <label>
+                            Tu correo
+                            <input type="email" name="correo" placeholder="Ej: d.de.go.0022@insuco.cl" required>
+                        </label>
+                    </div>
+
+                    <label>
+                        Tipo de reporte
+                        <select name="tipo" required>
+                            <option value="" selected disabled>Selecciona una opción</option>
+                            <option value="diseno">Error de diseño</option>
+                            <option value="funcionalidad">Error de funcionalidad</option>
+                            <option value="contenido">Información incorrecta</option>
+                            <option value="idea">Idea o sugerencia</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        ¿Qué ocurrió?
+                        <textarea name="mensaje" rows="6" placeholder="Cuéntanos en qué página lo viste y qué debería ocurrir..." required></textarea>
+                    </label>
+
+                    <!-- Botón que envía los datos del formulario -->
+                    <button type="submit">Enviar reporte <span aria-hidden="true">→</span></button>
+                    <p class="form-status" id="enviado">Gracias por ayudarnos a construir una mejor experiencia.</p>
+                </form>
+
+                <aside class="contact-aside">
+                    <span class="aside-number">02</span>
+                    <h2>Antes de enviarlo</h2>
+                    <p>Un buen reporte nos permite entender el problema sin tener que adivinar
+                        asi que no mandes una pendejada y redacta bien tu reporte, si no lo haces no podremos ayudarte y tu reporte sera ignorado.
+                    </p>
+                    <ul>
+                        <li>Indicanos cual es el error</li>
+                        <li>Describe detalladamente lo que sucedió</li>
+                        <li>Te ayudaremos en todo lo posible corazon(●'◡'●)</li>
+                    </ul>
+                    <a class="back-link" href="../Informaciondelabs/index.html">← Volver a los laboratorios</a>
+                </aside>
+            </section>
+        </main>
+
+        <!-- Pie de página de la institución -->
+        <footer>&copy; Instituto Superior de Comercio Francisco Araya Bennett 2026</footer>
+    </div>
+</body>
+</html>
