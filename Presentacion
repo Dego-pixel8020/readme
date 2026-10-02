@@ -1,0 +1,99 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza HTML5 -->
+<html lang="es">
+<head>
+    <!-- Configuración de caracteres y adaptación a diferentes pantallas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título y estilos de la página de presentación -->
+    <title>Presentación y propósito | Instituto Superior de Comercio Francisco Araya Bennett</title>
+    <link rel="stylesheet" href="Presentacion.css">
+</head>
+<body>
+    <!-- Contenedor general de la página -->
+    <div class="page-shell">
+        <!-- Encabezado con navegación hacia las demás páginas -->
+        <header class="topbar">
+            <nav class="nav" aria-label="Navegación principal">
+                <a class="brand" href="../Informaciondelabs/index.html">
+                    <img src="../Informaciondelabs/insuco.jpg" alt="Logo del liceo">
+                    <span>Instituto Superior de Comercio Francisco Araya Bennett</span>
+                </a>
+                <div class="nav-links">
+                    <a href="../Informaciondelabs/index.html">Inicio</a>
+                    <a href="../Sobremi/yo.html">Sobre mí</a>
+                    <a href="../Contactarme/Comunicarme.html">Contacto</a>
+                    <a href="../Reserva/Reservaciones.html">Reservar</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Contenido que explica el propósito del sitio -->
+        <main>
+            <!-- Mensaje principal de bienvenida y acceso a los laboratorios -->
+            <section class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow">Conoce nuestro propósito</p>
+                    <h1>Que cada estudiante encuentre su lugar.</h1>
+                    <p class="hero-text">Creamos este espacio para que la llegada al liceo sea más simple, clara y tranquila, especialmente para quienes recién comienzan su camino en Instituto Superior de Comercio Francisco Araya Bennett</p>
+                    <a class="button" href="../Informaciondelabs/index.html">Explorar laboratorios <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="hero-visual">
+                    <div class="number">01</div>
+                    <img src="../Informaciondelabs/insuco.jpg" alt="Logo del Instituto Superior de Comercio">
+                    <span>Orientación para la vida escolar</span>
+                </div>
+            </section>
+
+            <!-- Motivo por el que se creó esta página -->
+            <section class="purpose" aria-labelledby="purpose-title">
+                <div class="section-label">¿Por qué existe esta página?</div>
+                <div>
+                    <h2 id="purpose-title">Información que acompaña</h2>
+                    <p>Sabemos que los primeros días pueden traer muchas preguntas: dónde está cada laboratorio, qué curso lo ocupa o a qué hora corresponde asistir. Aquí reunimos esa información para que puedas moverte con confianza y llegar a tiempo a tus clases</p>
+                </div>
+            </section>
+
+            <section class="welcome-message" aria-labelledby="welcome-title">
+                <div class="welcome-mark">02</div>
+                <div class="welcome-copy">
+                    <p class="eyebrow">Una bienvenida para ti</p>
+                    <h2 id="welcome-title">Estamos aquí para ayudarte</h2>
+                    <p>¡Hola! Nuestro propósito es enseñar los laboratorios y sus horarios a los alumnos nuevos del liceo, para que sepan dónde se encuentran, lleguen a tiempo a sus clases y no se pierdan de nada</p>
+                    <p>También queremos evitar confusiones: así podrás saber qué laboratorio corresponde a tu curso y no entrar por equivocación a un espacio que está utilizando otro curso</p>
+                    <strong>Esperamos que puedas aprovechar esta información</strong>
+                </div>
+            </section>
+
+            <!-- Objetivos principales del sitio web -->
+            <section class="values" aria-label="Objetivos de la página">
+                <article class="value-card">
+                    <span class="card-number">01</span>
+                    <h3>Ubícate</h3>
+                    <p>Conoce los espacios del liceo y encuentra el laboratorio que necesitas</p>
+                </article>
+                <article class="value-card featured">
+                    <span class="card-number">02</span>
+                    <h3>Organízate</h3>
+                    <p>Revisa los horarios de tu jornada para no confundirte cabeza de melon!╰(*°▽°*)╯</p>
+                </article>
+                <article class="value-card">
+                    <span class="card-number">03</span>
+                    <h3>De todos para todos</h3>
+                    <p>Los laboratorios son de todos, todos tiene el derecho de usarlos asi que no se pelen por ellos cabezas huecas! (╯▔皿▔)╯
+                    </p>
+                </article>
+            </section>
+
+            <section class="closing-note">
+                <p class="eyebrow">Estamos contigo</p>
+                <h2>Esperamos que esta información te sea útil.</h2>
+                <p>Si tienes una duda, queja o sugerencia, puedes escribirnos desde la página de contacto.</p>
+                <a class="text-link" href="../Contactarme/Comunicarme.html">Déjanos un mensaje <span aria-hidden="true">↗</span></a>
+            </section>
+        </main>
+
+        <!-- Pie de página de la institución -->
+        <footer>&copy; Instituto Superior de Comercio Francisco Araya Bennett 2026</footer>
+    </div>
+</body>
+</html>
