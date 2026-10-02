@@ -1,0 +1,137 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza HTML5 -->
+<html lang="es">
+<head>
+    <!-- Configuración de caracteres y adaptación a diferentes pantallas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título y estilos de la página de reservas -->
+    <title>Reservar un laboratorio | Instituto Superior de Comercio Francisco Araya Bennett</title>
+    <link rel="stylesheet" href="Reservaciones.css">
+</head>
+<body>
+    <!-- Contenedor general de la página -->
+    <div class="page-shell">
+        <!-- Encabezado con navegación hacia las demás páginas -->
+        <header class="topbar">
+            <nav class="nav" aria-label="Navegación principal">
+                <a class="brand" href="../Informaciondelabs/index.html">
+                    <img src="../Informaciondelabs/insuco.jpg" alt="Logo del liceo">
+                    <span>Instituto Superior de Comercio Francisco Araya Bennett</span>
+                </a>
+                <div class="nav-links">
+                    <a href="../Informaciondelabs/index.html">Inicio</a>
+                    <a href="../Sobremi/yo.html">Sobre mí</a>
+                    <a href="../Presentacion/Presentacion.html">Presentación</a>
+                    <a href="../Contactarme/Comunicarme.html">Contacto</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Contenido principal del formulario de reservas -->
+        <main>
+            <!-- Título y estado general de las solicitudes -->
+            <section class="page-heading">
+                <div>
+                    <p class="eyebrow">Panel de solicitudes</p>
+                    <h1>Reserva tu laboratorio</h1>
+                    <p class="intro-text">Planifica el uso de los espacios de informática del liceo en pocos pasos.</p>
+                </div>
+                <div class="request-status"><span class="status-dot"></span> Solicitudes abiertas</div>
+            </section>
+
+            <!-- Resumen rápido de horarios y cantidad de laboratorios -->
+            <section class="quick-stats" aria-label="Resumen de disponibilidad">
+                <div><strong>05</strong><span>Laboratorios</span></div>
+                <div><strong>08:00</strong><span>Inicio de jornada</span></div>
+                <div><strong>17:00</strong><span>Cierre de jornada</span></div>
+                <div><strong>24 h</strong><span>Tiempo de respuesta</span></div>
+            </section>
+
+            <!-- Formulario de solicitud y horarios de referencia -->
+            <section class="booking-layout" aria-label="Solicitud de reserva">
+                <form class="booking-form" action="../Reservaconexisto/exito en la reserva!.html" method="get">
+                    <div class="form-heading">
+                        <span class="step-label">PASO 1 DE 2</span>
+                        <h2>Datos de la solicitud</h2>
+                        <p>Elige el espacio y el momento que necesitas.</p>
+                    </div>
+
+                    <div class="field-grid">
+                        <label>
+                            Laboratorio
+                            <select name="laboratorio" required>
+                                <option value="" selected disabled>Selecciona un laboratorio</option>
+                                <option value="laboratorio-1">Laboratorio 1</option>
+                                <option value="laboratorio-2">Laboratorio 2</option>
+                                <option value="laboratorio-3">Laboratorio 3</option>
+                                <option value="laboratorio-4">Laboratorio 4</option>
+                                <option value="laboratorio-5">Laboratorio 5</option>
+                            </select>
+                        </label>
+                        <label>
+                            Curso o grupo
+                            <input type="text" name="curso" placeholder="Ej. 4° medio H" required>
+                        </label>
+                    </div>
+
+                    <div class="field-grid">
+                        <label>
+                            Fecha
+                            <input type="date" name="fecha" required>
+                        </label>
+                        <label>
+                            Horario
+                            <select name="horario" required>
+                                <option value="" selected disabled>Selecciona un horario</option>
+                                <option value="08-00">08:00 - 09:30</option>
+                                <option value="09-45">09:45 - 11:15</option>
+                                <option value="11-30">11:30 - 13:00</option>
+                                <option value="14-00">14:00 - 15:30</option>
+                                <option value="15-45">15:45 - 17:00</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <label>
+                        Nombre del profesor jefe
+                        <input type="text" name="profesor-jefe" placeholder="Escribe el nombre completo" required>
+                    </label>
+
+                    <label>
+                        Motivo de la reserva
+                        <textarea name="motivo" rows="5" placeholder="Ej. Clase de computación, trabajo grupal o actividad escolar" required></textarea>
+                    </label>
+
+                    <!-- Envía la solicitud a la página de confirmación -->
+                    <button type="submit">Solicitar laboratorio <span aria-hidden="true">→</span></button>
+                    <p class="form-note" id="confirmacion">Recibirás una confirmación en un plazo máximo de 24 horas.</p>
+            
+                </form>
+
+                <aside class="booking-aside">
+                    <div class="aside-heading">
+                        <span class="step-label">PASO 2 DE 2</span>
+                        <h2>Horarios de referencia</h2>
+                    </div>
+                    <div class="schedule">
+                        <div><span>08:00 - 09:30</span><b class="available">Disponible</b></div>
+                        <div><span>09:45 - 11:15</span><b class="busy">En revisión</b></div>
+                        <div><span>11:30 - 13:00</span><b class="available">Disponible</b></div>
+                        <div><span>14:00 - 15:30</span><b class="available">Disponible</b></div>
+                        <div><span>15:45 - 17:00</span><b class="busy">En revisión</b></div>
+                    </div>
+                    <h3>Importante</h3>
+                    <ul>
+                        <li>La reserva debe ser confirmada por el profesor jefe.</li>
+                        <li>La disponibilidad puede cambiar durante el día.</li>
+                    </ul>
+                    <a class="back-link" href="../Informaciondelabs/index.html">← Ver disponibilidad</a>
+                </aside>
+            </section>
+        </main>
+
+        <!-- Pie de página de la institución -->
+        <footer>&copy; Instituto Superior de Comercio Francisco Araya Bennett 2026</footer>
+    </div>
+</body>
+</html>
