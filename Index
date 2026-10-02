@@ -1,0 +1,183 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza la versión HTML -->
+<html lang="es">
+<head>
+    <!-- Permite mostrar correctamente tildes y otros caracteres especiales -->
+    <meta charset="UTF-8">
+    <!-- Adapta el ancho de la página a celulares, tablets y computadores -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Laboratorios Instituto Superior de Comercio Francisco Araya Bennett</title>
+    <!-- Conecta este documento con los estilos visuales del archivo CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Contenedor principal que agrupa toda la págin -->
+    <div class="page-shell">
+        <!-- Encabezado con el logo, el nombre del liceo y la navegación -->
+        <header class="topbar">
+            <nav class="nav">
+                <div class="logo-insuco">
+                    <!-- Imagen identificativa del establecimiento -->
+                    <img src="E:\proyectodiseñoweb\Informaciondelabs\insuco.jpg" alt="Logo del liceo">
+                    <span>Instituto Superior de Comercio Francisco Araya Bennett</span>
+                </div>
+                <!-- Enlaces que llevan a las otras páginas del sitio -->
+                <div class="nav-links">
+            <a href="E:\proyectodiseñoweb\Sobremi\yo.html">Administradores</a>
+            <a href="../Presentacion/Presentacion.html">Presentación</a>
+            <a href="../Contactarme/Comunicarme.html">Contacto</a>
+            <a href="../Reserva/Reservaciones.html">Reservaciones</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Contenido principal de la página de laboratorios -->
+        <main class="container" id="inicio">
+            <!-- Presentación inicial con el título y accesos rápidos -->
+            <section class="hero">
+                <div class="hero-text">
+                    <!-- Texto introductorio sobre el objetivo de la página -->
+                    <p class="eyebrow">Instituto Superior de Comercio</p>
+                    <h1>Laboratorios Instituto Superior de Comercio Francisco Araya Bennett</h1>
+                    <p>
+                        Aquí podrás consultar la disponibilidad, horarios y actividades de cada laboratorio
+                        del establecimiento, con información clara y organizada para facilitar su uso
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#informacion" class="btn btn-primary">Ver información</a>
+                        <a href="#laboratorios" class="btn btn-secondary">Consultar laboratorios</a>
+                    </div>
+                </div>
+                
+                <!-- Logo destacado que acompaña la presentación -->
+                <div class="hero-visual">
+                    <img src="insuco.jpg" alt="Logo del liceo">
+                </div>
+            </section>
+
+            <!-- Información general; el id permite llegar aquí desde un enlace interno -->
+            <section class="info-panel" id="informacion">
+                <h2>Información general</h2>
+                <p>
+                    En esta página encontrarás información útil sobre cada laboratorio del liceo, incluyendo
+                    horarios de uso, disponibilidad, actividades que se realizan y más. Nuestro objetivo es
+                    que la consulta sea sencilla, moderna y accesible para toda la comunidad escolar
+                </p>
+            </section>
+            <!-- Tarjetas resumidas con los principales datos que se pueden consultar -->
+            <section class="card-grid" aria-label="Información de laboratorios">
+                <div class="cards" id="laboratorios">
+                    <article class="card">
+                        <i>01</i>
+                        <h3>Disponibilidad</h3>
+                        <p>Consulta en qué momentos cada laboratorio está libre o en uso</p>
+                    </article>
+
+                    <article class="card">
+                        <i>02</i>
+                        <h3>Horarios</h3>
+                        <p>Organiza mejor tus actividades según los turnos y tiempos de uso</p>
+                    </article>
+
+                    <article class="card">
+                        <i>03</i>
+                        <h3>Laboratorios</h3>
+                        <p>Conoce la función de cada ambiente y su uso dentro del establecimiento</p>
+                    </article>
+                </div>
+            </section>
+            <!-- Tabla con el horario y el estado actual de cada laboratorio -->
+            <section class="status">
+                <h3>Estado de laboratorios</h3>
+                <table>
+                    <!-- Encabezados que describen las columnas de la tabla -->
+                    <thead>
+                        <tr>
+                            <th>Laboratorio</th>
+                            <th>Horario</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <!-- Filas con los datos de cada laboratorio -->
+                    <tbody>
+                        <tr>
+                            <td>Laboratorio 1</td>
+                            <td>08:30 - 17:00</td>
+                            <td><span class="estado ok">disponible</span></td>
+                        </tr>
+                        <tr>
+                            <td>Laboratorio 2</td>
+                            <td>09:15 - 17:00</td>
+                            <td><span class="estado ocupado">ocupado</span></td>
+                        </tr>
+                        <tr>
+                            <td>Laboratorio 3</td>
+                            <td>10:25 - 17:00</td>
+                            <td><span class="estado ok">disponible</span></td>
+                        </tr>
+                        <tr>
+                            <td>Laboratorio 4</td>
+                            <td>08:30 - 17:00</td>
+                            <td><span class="estado ocupado">ocupado</span></td>
+                        </tr>
+                        <tr>
+                            <td>Laboratorio 5</td>
+                            <td>11:15 - 17:00</td>
+                            <td><span class="estado ok">disponible</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <!-- Tabla detallada con los cursos y el enlace a la ficha de cada laboratorio -->
+        <section class="details-panel" aria-labelledby="details-title">
+            <h2 id="details-title">Información de cada laboratorio</h2>
+            <p class="details-intro">Selecciona un laboratorio para consultar sus características y normas de uso.</p>
+            <!-- Este contenedor permite controlar el desplazamiento de la tabla en pantallas pequeñas -->
+            <div class="details-table-wrapper">
+                <table class="details-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Laboratorio</th>
+                            <th scope="col">Cursos que van</th>
+                            <th scope="col">Información</th>
+                        </tr>
+                    </thead>
+                    <!-- Cada botón abre la página individual del laboratorio seleccionado -->
+                    <tbody>
+                        <tr>
+                            <td>Laboratorio 1</td>
+                            <td>4-H, 4-I, 3-A</td>
+                            <td><a class="btn btn-primary btn-small" href="../Lab1/laboratorio1.html">Ver ficha</a></td>
+                        </tr>
+                        <tr>
+                            <td>Laboratorio 2</td>
+                            <td>4-H, 2-I, 3-D</td>
+                            <td><a class="btn btn-primary btn-small" href="../Lab2/laboratorio2.html">Ver ficha</a></td>
+                        </tr>
+                        <tr>
+                            <td>Laboratorio 3</td>
+                            <td>4-A, 4-I, 3-C</td>
+                            <td><a class="btn btn-primary btn-small" href="../Lab3/laboratorio3.html">Ver ficha</a></td>
+                        </tr>
+                        <tr>
+                            <td>Laboratorio 4</td>
+                            <td>4-H, 3-H, 3-A, 3-F</td>
+                            <td><a class="btn btn-primary btn-small" href="../Lab4/laboratorio4.html">Ver ficha</a></td>
+                        </tr>
+                        <tr>
+                            <td>Laboratorio 5</td>
+                            <td>2-J, 3-C, 3-F</td>
+                            <td><a class="btn btn-primary btn-small" href="../Lab5/laboratorio5.html">Ver ficha</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- Pie de página con los derechos y el año de la institución --> 
+        <footer>
+            &copy; Instituto Superior de Comercio Francisco Araya Bennett 2026
+        </footer>
+    </div>
+</body>
+</html>
