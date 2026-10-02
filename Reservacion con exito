@@ -1,0 +1,85 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza HTML5 -->
+<html lang="es">
+<head>
+    <!-- Configuración de caracteres y adaptación a diferentes pantallas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título y estilos de la confirmación -->
+    <title>Reserva enviada | Instituto Superior de Comercio Francisco Araya Bennett</title>
+    <link rel="stylesheet" href="exito.css">
+</head>
+<body>
+    <!-- Contenedor general de la página -->
+    <div class="page-shell">
+        <!-- Encabezado con navegación y mensaje de confirmación -->
+        <header class="topbar">
+            <nav class="nav" aria-label="Navegación principal">
+                <a class="brand" href="../Informaciondelabs/index.html">
+                    <img src="../Informaciondelabs/insuco.jpg" alt="Logo del liceo">
+                    <span>Instituto Superior de Comercio Francisco Araya Bennett</span>
+                </a>
+                <div class="nav-links">
+                    <a href="../Informaciondelabs/index.html">Inicio</a>
+                    <a href="../Presentacion/Presentacion.html">Presentación</a>
+                    <a class="active" href="../Reserva/Reservaciones.html">Reservaciones</a>
+                    <a href="../Contactarme/Comunicarme.html">Contacto</a>
+                </div>
+            </nav>
+            <p class="reservation-heading">La reserva ha concluido con éxito. Tu horario es:</p>
+        </header>
+
+        <!-- Contenido principal de la confirmación -->
+        <main class="confirmation-page">
+            <!-- Tarjeta que muestra el resultado y los datos enviados -->
+            <section class="confirmation-card" aria-labelledby="success-title">
+                <div class="success-icon" aria-hidden="true">✓</div>
+                <p class="eyebrow">Solicitud recibida</p>
+                <h1 id="success-title">¡Reserva enviada con éxito!</h1>
+                <p class="message">Tu solicitud fue registrada. El profesor jefe revisará la disponibilidad y recibirás una respuesta dentro de las próximas 24 horas.</p>
+
+                <!-- Resumen de laboratorio, horario y fecha recibidos por la URL -->
+                <div class="reservacion">
+                    <div>
+                        <span>Laboratorio</span>
+                        <strong id="selected-lab">No indicado</strong>
+                    </div>
+                    <div class="highlight">
+                        <span>Horario seleccionado</span>
+                        <strong id="selected-time">No indicado</strong>
+                    </div>
+                    <div>
+                        <span>Fecha</span>
+                        <strong id="selected-date">No indicada</strong>
+                    </div>
+                </div>
+
+                <a class="button" href="../Reserva/Reservaciones.html">Hacer otra reserva <span aria-hidden="true">→</span></a>
+                <a class="text-link" href="../Informaciondelabs/index.html">Volver a los laboratorios</a>
+            </section>
+        </main>
+
+        <!-- Pie de página de la institución -->
+        <footer>&copy; Instituto Superior de Comercio Francisco Araya Bennett 2026</footer>
+    </div>
+
+    <!-- Lee los datos de la reserva enviados mediante parámetros de la URL -->
+    <script>
+        // Obtiene los datos enviados desde el formulario de reservas
+        const params = new URLSearchParams(window.location.search);
+        const schedule = {
+            "08-00": "08:00 - 09:30",
+            "09-45": "09:45 - 11:15",
+            "11-30": "11:30 - 13:00",
+            "14-00": "14:00 - 15:30",
+            "15-45": "15:45 - 17:00"
+        };
+        const laboratory = params.get("laboratorio");
+        const date = params.get("fecha");
+
+        // Muestra los valores recibidos dentro del resumen de confirmación
+        document.getElementById("selected-lab").textContent = laboratory ? laboratory.replace("laboratorio-", "Laboratorio ") : "No indicado";
+        document.getElementById("selected-time").textContent = schedule[params.get("horario")] || "No indicado";
+        document.getElementById("selected-date").textContent = date ? new Date(`${date}T12:00:00`).toLocaleDateString("es-CL") : "No indicada";
+    </script>
+</body>
+</html>
