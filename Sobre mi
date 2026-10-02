@@ -1,0 +1,139 @@
+<!DOCTYPE html> <!-- Indica que el documento utiliza HTML5 -->
+<html lang="es">
+<head>
+    <!-- Configuración de caracteres y adaptación a diferentes pantallas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título, librerías externas y estilos de la página -->
+    <title>Sobre mí | Diego Espinoza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="yo.css">
+</head>
+<body class="bg-slate-50">
+    <!-- Contenedor principal con clases de Tailwind CSS -->
+    <div class="max-w-5xl mx-auto px-6 py-8">
+        <!-- Navegación principal del sitio -->
+        <nav class="site-nav" aria-label="Navegación principal">
+            <a class="site-brand" href="../Informaciondelabs/index.html">Instituto Superior de Comercio Francisco Araya Bennett</a>
+            <div class="nav-links">
+                <a href="../Informaciondelabs/index.html">Inicio</a>
+                    <a href="../Presentacion/Presentacion.html">Presentación</a>
+                    <a href="../Contactarme/Comunicarme.html">Contacto</a>
+                    <a href="../Reserva/Reservaciones.html">Reservaciones</a>
+            </div>
+        </nav>
+        
+        <!-- Encabezado con la presentación del administrador -->
+        <div class="flex items-center justify-between mb-12">
+            <div>
+                <p class="eyebrow">SOBRE MÍ</p>
+                <div class="flex items-center gap-3 flex-wrap">
+                    <h1 class="text-4xl font-bold text-slate-900 title-font">I am Dego!</h1>
+                    <a href="../SobremiV2/Sobre mi v2.html" class="inline-block bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">
+                        Ver segundo perfil
+                    </a>
+                </div>
+                <p class="text-slate-500 mt-1">Así es, este es el administrador del sitio.</p>
+                <p class="text-slate-700 mt-1">Estoy aquí para apoyar a la comunidad escolar y mantener esta web útil y ordenada.</p>
+            </div>
+        </div>
+
+        <!-- Sección principal con foto y descripción personal -->
+        <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-100 overflow-hidden" id="presentacion">
+            <div class="grid md:grid-cols-5 gap-8 p-8 md:p-10">
+                
+                <!-- Foto -->
+                <div class="md:col-span-2 flex justify-center md:justify-start">
+                    <div class="relative">
+                        <img src="D:\proyectodiseñoweb\Sobremi\Ado.png"
+                             alt="Foto de Diego Espinoza" 
+                             loading="lazy"
+                             class="profile-img w-64 h-64 md:w-72 md:h-72 object-cover rounded-3xl border-4 border-white shadow-xl">
+                        
+                        <!-- Detalle personal que acompaña la fotografía -->
+                        <div class="absolute -bottom-2 -right-2 bg-white px-4 py-1.5 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-2">
+                            <i class="fa-solid fa-heart text-rose-500"></i>
+                            <span class="text-sm font-semibold text-slate-700">Siempre atendiendo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Texto -->
+                <div class="md:col-span-3 flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">¡Mucho Gusto! Soy Dego </h2>
+                    <div class="space-y-4 text-slate-600 text-[15px] leading-relaxed">
+                        <p>
+                           Hola, mucho gusto. Soy el administrador de esta página web. Si tienes dudas, sugerencias o necesitas más información sobre el sitio, puedes contactarme por correo o por los medios disponibles.
+                        </p>
+                        <p>
+                           Espero que esta página te ayude a orientarte mejor en el liceo y que puedas aprovechar la información de forma sencilla y clara.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Datos para contactar al administrador -->
+        <div class="mt-12">
+            <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                <span>Contacto</span>
+                <div class="flex-1 h-px bg-gradient-to-r from-slate-200 to-transparent"></div>
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-4">
+                
+                <!-- Email -->
+                <a href="mailto:d.de.go.0022@gmail.com" 
+                   class="contact-card group bg-white border border-slate-200 hover:border-blue-200 rounded-2xl p-5 flex items-start gap-4">
+                    <div class="w-11 h-11 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-slate-500 font-medium">Email</p>
+                        <p class="font-semibold text-slate-800 mt-0.5 break-all group-hover:text-blue-600 transition-colors">d.de.go.0022@gmail.com</p>
+                    </div>
+                </a>
+
+                <!-- Teléfono -->
+                <a href="tel:+56930783046" 
+                   class="contact-card group bg-white border border-slate-200 hover:border-blue-200 rounded-2xl p-5 flex items-start gap-4">
+                    <div class="w-11 h-11 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-phone text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-slate-500 font-medium">Teléfono</p>
+                        <p class="font-semibold text-slate-800 mt-0.5 group-hover:text-emerald-600 transition-colors">+56 9 3078 3046</p>
+                    </div>
+                </a>
+
+                <!-- Dirección -->
+                <div class="contact-card bg-white border border-slate-200 rounded-2xl p-5 flex items-start gap-4">
+                    <div class="w-11 h-11 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-map-marker-alt text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-slate-500 font-medium">Ubicación</p>
+                        <p class="font-semibold text-slate-800 mt-0.5">Valparaíso, playancha</p>
+                        <p class="text-sm text-slate-500">Chile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie de página -->
+        <div class="mt-16 text-center">
+            <p class="text-xs text-slate-400">Gracias por visitar esta página.</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Inicializa una función cuando termina de cargar la página
+        function initializeTailwind() {
+            console.log('%c[Mejorada] Página lista y optimizada', 'color:#64748b');
+        }
+        window.onload = initializeTailwind;
+    </script>
+</body>
+</html>
